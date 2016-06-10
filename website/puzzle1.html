@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style1.css" rel="stylesheet" type="text/css" />
+<script>
+function checkAnswer(nameTag, answer){
+	userAnswer = document.getElementById(nameTag).value;
+	if (userAnswer.toLowerCase()==answer)
+			return true;
+	else
+		return false;
+}
+
+function checkAnswerPuzzle(){
+	var goodAnswer = 0;
+	if(checkAnswer('usrAns1', 'белка'))
+			goodAnswer++;
+	if(checkAnswer('usrAns2', 'индюк'))
+			goodAnswer++;
+	if(checkAnswer('usrAns3', 'бабочка'))
+			goodAnswer++;
+	if(goodAnswer==0)
+		alert('Вы ничего не угадали');
+	else
+		alert('Количесво правильных ответов: '+ goodAnswer);
+
+}
+</script>
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle1.html">Загадки для одного</a></li>
+			<li><a href="guess.html">Угадай число</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Личный сайт студента GeekBrains</h2>		
+	</div>
+	<div id="content">
+	<h3>Отгадайте три загадки</h3></br>
+
+
+	<b>Первая загадка.</b></br></br>
+	Кто по елкам ловко скачет</br>
+ 	И взлетает на дубы?</br>
+ 	Кто в дупле орешки прячет,</br>
+	Сушит на зиму грибы?</br></br>
+
+	<input type="text" id=usrAns1></input></br></br></br>
+	
+
+	<b>Вторая загадка</b> </br></br>
+	Распускает хвост павлином,</br>
+	Ходит важным господином,</br>
+	По земле ногами - стук,</br>
+	Как зовут его - ...	</br></br>
+	<input type="text"  id=usrAns2></input></br></br></br>
+
+
+
+	<b>Третья загадка</b></br></br>
+	Над цветком порхает, пляшет,</br>
+	Веерком узорным машет.</br></br>
+	<input type="text" id=usrAns3></input></br></br></br>
+	<input type="button" value="Проверить ответы" onclick="checkAnswerPuzzle()">
+	
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+    </div>
+    
+</div> <!-- end of warpper -->
+
+</body>
+</html>

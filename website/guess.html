@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Личный сайт студента GeekBrains</title>
+
+<link href="css/style1.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript">
+// Опять пишу игрушку угадайку с ветвлениями и циклами
+function guessNumber()
+{
+
+alert('Игра - Угадай число');
+var num = Math.floor(Math.random() * 101);
+numCount = 0;
+unnumCount = 0;
+while (true)
+	{
+		var numPlayer = parseInt(prompt('Введите число от 1 до 100'));
+		numCount++;
+		if (numPlayer == num)
+		{
+			if (numCount < 5 && unnumCount < 2)
+			{
+				alert('Вы угадали число ' +num+ " за "+numCount+" попытки, из которых " +unnumCount+ ' раз Вы не попали в заданный диапазон');
+			}
+			else if (numCount < 5 && unnumCount > 4)
+			{
+				alert('Вы угадали число ' +num+ " за "+numCount+" попытки, из которых " +unnumCount+ ' раз Вы не попали в заданный диапазон');
+			}
+			else if (numCount > 4 && unnumCount > 4)
+			{
+				alert('Вы угадали число ' +num+ " за "+numCount+" попыток, из которых " +unnumCount+ ' раз Вы не попали в заданный диапазон');
+			}
+			else if (numCount > 4 && unnumCount < 2)
+			{
+				alert('Вы угадали число ' +num+ " за "+numCount+" попыток из которых " +unnumCount+ ' раз Вы не попали в заданный диапазон');
+			}
+			else if (numCount < 5 && unnumCount > 1 && unnumCount < 5)
+			{
+				alert('Вы угадали число ' +num+ " за "+numCount+" попытки, из которых " +unnumCount+ ' раза Вы не попали в заданный диапазон');
+			}
+			else if (numCount > 4 && unnumCount > 1 && unnumCount < 5)
+			{
+				alert('Вы угадали число ' +num+ " за "+numCount+" попыток, из которых " +unnumCount+ ' раза Вы не попали в заданный диапазон');
+			}
+
+			break
+		}
+		else if (numPlayer < num && numPlayer > 1)
+		{
+			alert ('Ваше чило меньше загаданного');
+		}
+		else if (numPlayer < 100 && numPlayer > num)
+		{
+			alert ('Ваше чило больше загаданного');
+		}
+		else 
+		{
+			alert ('Ну я же просил ввести число от 1 до 100!');
+			unnumCount++;
+		}
+	}
+}
+
+
+</script>
+
+
+</head>
+<body>
+
+<div id="tooplate_body_wrapper" />
+<div id="tooplate_wrapper" />
+<div id="tooplate_header">
+	<div id="site_title">
+		<h1><a href="http://geekbrains.ru">GeekBrains</a></h1>
+	</div>
+	<div id="tooplate_menu">
+		<ul>
+			<li><a href="index.html">Главная</a></li>
+			<li><a href="puzzle1.html">Загадки для одного</a></li>
+			<li><a href="guess.html">Угадай число</a></li>
+		</ul>
+	</div>
+</div>
+
+<div id="content_box">
+		
+	<div id="content_title">
+		<h2>Личный сайт студента GeekBrains</h2>		
+	</div>
+	<div id="content">
+	
+		<h3>Игра угадай число</h3></br></br>
+
+
+	<b>Компьютер выбирает случайное число в диапазоне от 0 до 100</b></br></br>
+	Вы должны его угадать</br></br>
+ 	
+ 	Всплывающее окно Вам скажет угадали Вы или нет, </br> 
+ 	если не угадали, то сообщит <b>больше</b> или <b>меньше</b> Ваше число загаданному</br>
+	Когда Вы угадаете число, то всплывающее окно укажет сколько попыток Вам потребовалось</br></br>
+	Кто быстрее угадает! <b>Проверьте Вашу интуицию))).</b></br></br></br>
+
+	
+	
+	<input type="button" value="ИГРАТЬ" onclick="guessNumber()">
+	</div>
+           
+    <div id="tooplate_footer">    
+        Copyright © 2016 <a href="http://geekbrains.ru">GeekBrains</a>
+    </div>
+    
+</div> <!-- end of warpper -->
+
+</body>
+</html>
