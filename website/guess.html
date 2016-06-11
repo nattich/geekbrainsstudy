@@ -16,9 +16,10 @@ numCount = 0;
 unnumCount = 0;
 while (true)
 	{
-		var numPlayer = parseInt(prompt('Введите число от 1 до 100'));
+      var input = prompt('Введите число от 1 до 100');
+		var numPlayer = parseInt(input);
 		numCount++;
-		if (!numPlayer){break;
+		if (!input){break;
       }else if(numPlayer == num)
 		{
 			if (numCount < 5 && unnumCount < 2)
